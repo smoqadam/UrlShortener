@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'yekan';
+    src:url('fonts/BYekan.eot?#') format('eot'),    
+          url('fonts/BYekan.woff') format('woff'),
+          url('fonts/BYekan.ttf') format('truetype'); 
+}
+
+body
+{
+	margin:0;
+	background:#eee;
+	font-family:Tahoma;
+	font-size:12px;
+}
+h1 , h2
+{
+	font-family:'yekan';
+}
+form
+{
+	direction:rtl;
+}
+
+input[type="text"]
+{
+	border:1px solid #ccc;
+	border-radius:3px;
+	margin:10px;
+	width:500px;
+	padding:8px;
+}
+label
+{
+	
+	font-size:23px;
+	margin-top:15px;
+}
+/* Button Style */
+.btn {
+	-moz-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
+	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9dce2c', endColorstr='#8cb82b');
+	background-color:#9dce2c;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	font-family:'yekan';
+	font-size:12px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #689324;
+}.btn:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8cb82b), color-stop(1, #9dce2c) );
+	background:-moz-linear-gradient( center top, #8cb82b 5%, #9dce2c 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8cb82b', endColorstr='#9dce2c');
+	background-color:#8cb82b;
+}.btn:active {
+	position:relative;
+	top:1px;
+}
+
+.title
+{
+	text-align:center;
+	background:#ccc;
+	margin:0;
+	padding:20px;
+	
+}
+
+.main
+{
+	width:70%;
+	margin:auto;
+	text-align:center;
+	padding-top:50px;
+}
+.result
+{
+	text-align:center;
+	margin-top:30px;
+}
+
+.result a
+{
+	font-size:20px;
+	color:#8cb82b;
+	text-decoration:none;
+}
+.result a:hover
+{
+	color:#8c002b;
+	text-decoration:underline;
+}
+.footer
+{
+	position:absolute;
+	width:100%;
+	text-align:center;
+	bottom:20px;
+}
+
+.footer div
+{
+	margin:auto;	
+}
+
+.error
+{
+	color:red;
+	font-size:15px;
+}
