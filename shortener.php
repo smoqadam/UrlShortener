@@ -2,9 +2,7 @@
 		
 include 'includes/config.php';
 
-
-if(isset($_POST['url']))
-{
+if(isset($_POST['url'])) {
 	$url = $_POST['url'];
 	include 'includes/UrlShortener.php';
 	$short = new UrlShortener();
