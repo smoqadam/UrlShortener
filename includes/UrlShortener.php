@@ -77,8 +77,8 @@ class UrlShortener
 		// insert in db and return short code
 		if($this->validUrl($url)) {
 			$short_code = $this->createShortCode($url);
-			$stm = $this->pdo->prepare('insert into urls (url , short_code,create_time)values(:url,:short_code,:time)');
-			$param = array('url'=>$url,'short_code'=>$short_code,'time'=>date('Y-j-m'));
+			$stm = $this->pdo->prepare('insert into urls (url , short_code,create_time,visits)values(:url,:short_code,:time,:visits)');
+			$param = array('url'=>$url,'short_code'=>$short_code,'time'=>date('Y-j-m'),'visits'=>0);
 			$stm->execute($param);
 			return $short_code;
 		} else {
