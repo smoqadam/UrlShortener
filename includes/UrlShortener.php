@@ -20,7 +20,7 @@ class UrlShortener
 
 	private $pdo;
 	
-	function __construct()
+	public function __construct()
 	{
 		$this->pdo = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME,DB_USERNAME,DB_PASSWORD);
 		
@@ -30,12 +30,11 @@ class UrlShortener
 	* Create short code
 	* 
 	*/
-	function createShortCode()
+	public function createShortCode()
 	{
 		$chars = "123456789bcdfghjkmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ";
 		$short_code = '';
-		while(strlen($short_code) < 7)
-		{
+		while(strlen($short_code) < 7) {
 			$short_code .= $chars[rand(0,strlen($chars))];
 		}
 		// check in db
@@ -51,7 +50,7 @@ class UrlShortener
 	* return true if url format valid
 	* 
 	*/
-	function validUrl($url)
+	public function validUrl($url)
 	{
 		return filter_var($url , FILTER_VALIDATE_URL , FILTER_FLAG_HOST_REQUIRED);
 	}
@@ -60,7 +59,7 @@ class UrlShortener
 	* Check url exist in db
 	* @param $url String
 	*/
-	function existInDb($url)
+	public function existInDb($url)
 	{
 		$stm = $this->pdo->prepare('select * from urls where url = \''.$url.'\'');
 		$stm->execute();
@@ -69,23 +68,20 @@ class UrlShortener
 		return ( empty($res['short_code']) ? false : $res['short_code']);
 	}
 	
-	function insertInDb($url)
+	public function insertInDb($url)
 	{
 		// if url exist in db return short code
-		if(($short_code = $this->existInDb($url)) !== false)
-		{
+		if(($short_code = $this->existInDb($url)) !== false) {
 			return $short_code;
 		}
 		// insert in db and return short code
-		if($this->validUrl($url))
-		{
+		if($this->validUrl($url)) {
 			$short_code = $this->createShortCode($url);
-			$stm = $this->pdo->prepare('insert into urls (url , short_code,create_time)values(:url,:short_code,:time)');
-			$param = array('url'=>$url,'short_code'=>$short_code,'time'=>date('Y-j-m'));
+			$stm = $this->pdo->prepare('insert into urls (url , short_code,create_time,visits)values(:url,:short_code,:time,:visits)');
+			$param = array('url'=>$url,'short_code'=>$short_code,'time'=>date('Y-j-m'),'visits'=>0);
 			$stm->execute($param);
 			return $short_code;
-		}else
-		{
+		} else {
 			return 'invalid';
 		}
 		
@@ -95,7 +91,7 @@ class UrlShortener
 	/**
 	* return url
 	*/
-	function getUrl($short_code)
+	public function getUrl($short_code)
 	{
 		$stm = $this->pdo->prepare('select * from urls where short_code = :short');
 		$stm->execute(array('short'=>$short_code));
@@ -105,13 +101,13 @@ class UrlShortener
 	}
 	
 	
-	function addCount($url)
+	public function addCount($url)
 	{
 		$stm = $this->pdo->prepare('update urls set visits = visits +1 where url = :url');
 		$stm->execute(array('url'=>$url));
 	}
 		
-	function getAll()
+	public function getAll()
 	{
 		$stm = $this->pdo->prepare('select * from urls');
 		$stm->execute();

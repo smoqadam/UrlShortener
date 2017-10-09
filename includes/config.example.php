@@ -1,8 +1,7 @@
 <?php
-
 define('DB_HOST','localhost');
-define('DB_NAME','url_shortener');
+define('DB_NAME','urlshortener');
 define('DB_USERNAME','root');
 define('DB_PASSWORD','');
-define('SITEURL','http://127.0.0.1/url-shortener/');
+define('SITEURL','http://localhost/UrlShortener/');
 date_default_timezone_set('Asia/Tehran');	
