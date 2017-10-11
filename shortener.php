@@ -8,6 +8,7 @@ if(isset($_POST['url'])) {
 	$short = new UrlShortener();
 	$short_code = $short->insertInDb($url) ; 
 	//echo '$short_code';
-	$msg['short'] = ($short_code == 'invalid') ? 'invalid' : SITEURL.'s/'.$short_code;
+	$msg['short'] = ($short_code == 'invalid') ? 'invalid' : SITEURL.$short_code;
+
 	echo json_encode($msg);
 }

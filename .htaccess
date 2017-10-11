@@ -1,11 +1,8 @@
 RewriteEngine on
 
-#RewriteCond %{ENV:REDIRECT_STATUS} .
-#RewriteRule ^ - [L]
-
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 
-RewriteRule ^api/v1/shortener$ api/v1/shortener.php [L]
+RewriteRule ^api/v1/shortener$ api/v1/shortener.php
 
-RewriteRule ^s/(.*)$ goto.php?url=$1
+RewriteRule ^([a-zA-Z0-9-]*)$ goto.php?url=$1
