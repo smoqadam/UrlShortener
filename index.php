@@ -34,7 +34,7 @@
 		<div class="result">
 		</div>
 		<div class="footer">
-			<div>Created By : <a href="http://phpro.ir" target="_blank" > PHPro.ir </a></div>
+			<div>Created By : <a href="http://cotint.ir" target="_blank" > COTINT.ir </a></div>
 		</div>
 	</body>
 </html>
