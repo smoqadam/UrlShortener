@@ -32,10 +32,10 @@
             </div>
             <div class="global-menu">
                 <div class="global-menu__wrap">
-                    <a class="global-menu__item global-menu__item--demo-6" href="#">درباره ما</a>
-                    <a class="global-menu__item global-menu__item--demo-6" href="#">تماس باما</a>
-                    <a class="global-menu__item global-menu__item--demo-6" href="#">سایت کوتینت</a>
-                    <a class="global-menu__item global-menu__item--demo-6" href="#">سوالات متداول</a>
+                    <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/about-us/">درباره ما</a>
+                    <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/contact/">تماس باما</a>
+                    <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/">سایت کوتینت</a>
+                    <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/features/">خدمات</a>
                 </div>
             </div>
             <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -68,7 +68,7 @@
         </div>
         <div class="tag-p">
                 <p>
-                    موفقیت خود را اندازه گیری کنید همراه با Hootsuite همراه شوید و تجزیه و تحلیل عمیق را با هر لینک شما به اشتراک بگذارید. سعی کنید Hootsuite رایگان »
+                     There is no tomorrow
                 </p>
         </div>
     </main>
@@ -76,10 +76,10 @@
 			<p class="cotint">Powered By Cotint</p>
             <div class="footer-bord">
                 <ul>
-                    <a href="#"><li>سوالات متداول</li></a>
-                    <a href="#"><li>درباره ما</li></a>
-                    <a href="#"><li>تماس باما</li></a>
-                    <a href="#"><li>صفحه اصلی</li></a>
+                    <a href="http://cotint.ir/about-us/"><li>درباره ما</li></a>
+                    <a href="http://cotint.ir/contact/"><li>تماس باما</li></a>
+                    <a href="http://cotint.ir/"><li>سایت کوتینت</li></a>
+                    <a href="http://cotint.ir/features/"><li>خدمات</li></a>
                 </ul>
             </div>
 		</div>
