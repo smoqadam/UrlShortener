@@ -22,14 +22,14 @@ background-color: #eee !important;
 	--color-text: #239963;
 	--color-bg: #333;
 	--color-link: #239963;
-	--color-link-hover: #e83779;
+	--color-link-hover: #239963;
 	--color-info: #fff;
 	--color-title: inherit;
 	--font-family-title: sans, serif;
 	--font-size-title: 8vmax;
 	--font-weight-title: 400;
 	--color-menu: #ffffff;
-	--color-menu-hover: #c14343;
+	--color-menu-hover: #239963;
 	--font-family-menu: var(--font-family-title);
 	--font-size-menu: 3.5vmax;
 	--font-weight-menu: 400;
@@ -103,7 +103,7 @@ main {
 .content--fixed {
 	position: fixed;
 	top: 0;
-	left: 0;
+	right: 0;
 	display: grid;
 	align-content: space-between;
 	width: 100%;
@@ -187,6 +187,7 @@ main {
 
 a.demo--current {
 	pointer-events: none;
+	text-decoration: none;
 }
 
 /* Top Navigation Style */
@@ -281,6 +282,7 @@ a.demo--current {
 
 .global-menu__item:hover {
 	color: var(--color-menu-hover);
+	text-decoration: none;
 }
 
 .global-menu__item.is-opened {
@@ -473,43 +475,53 @@ a.demo--current {
 
 .global-menu__item--demo-5.is-opened:nth-of-type(4) {
 	transition-delay: 0.7s;
+	text-align: right;
 }
 
 /* demo 6 */
 .global-menu__item--demo-6.is-opened {
 	transition-duration: 0.8s;
+	text-align: right;
 }
 
 .global-menu__item--demo-6:nth-of-type(1) {
 	transition-delay: 0.25s;
+	text-align: right;
 }
 
 .global-menu__item--demo-6.is-opened:nth-of-type(1) {
 	transition-delay: 1s;
+	text-align: right;
 }
 
 .global-menu__item--demo-6:nth-of-type(2) {
 	transition-delay: 0.2s;
+	text-align: right;
 }
 
 .global-menu__item--demo-6.is-opened:nth-of-type(2) {
 	transition-delay: 1.1s;
+	text-align: right;
 }
 
 .global-menu__item--demo-6:nth-of-type(3) {
 	transition-delay: 0.15s;
+	text-align: right;
 }
 
 .global-menu__item--demo-6.is-opened:nth-of-type(3) {
 	transition-delay: 1.2s;
+	text-align: right;
 }
 
 .global-menu__item--demo-6:nth-of-type(4) {
 	transition-delay: 0.1s;
+	text-align: right;
 }
 
 .global-menu__item--demo-6.is-opened:nth-of-type(4) {
 	transition-delay: 1.3s;
+	text-align: right;
 }
 
 .shape-overlays {
@@ -582,7 +594,7 @@ a.demo--current {
 	position: relative;
 	cursor: pointer;
 	position: absolute;
-	top: -2.75em;
+	top: 1.25em;
 	right: 2.25em;
 	z-index: 110;
 	border-radius: 50%;
@@ -857,6 +869,7 @@ a.demo--current {
 	}
 	a.demo--current {
 		background: var(--color-link-hover);
+		text-decoration: none;
 	}
 	.demo span {
 		position: absolute;

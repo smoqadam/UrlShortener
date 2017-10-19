@@ -1,5 +1,8 @@
 ﻿<html>
 	<head>
+        <meta property="og:site_name" content="کوتاه کننده لینک"/>
+        <meta property="og:description" content="سرویس کوتاه کننده لینک کوتینت جهت استفاده در شبکه اجتماعی و سایر موارد"/>
+        <meta property="og:image" content="images/cotint-logo.jpg" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title> کوتاه کننده لینک </title>
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -59,21 +62,24 @@
             </svg>
         </div>
         <div class="box">
+
             <form class="form-cont" id="frm1" action="" method="post">
                 <h2 class="center">لینک را در کادر زیر وارد کنید  </h2>
-                <input  class="contoroler " type="text" id="url" name="url" placeholder="لطفا لینک خود را وارد کنید" />
+                <input  class="contoroler " type="text" id="url" name="url" placeholder="http://cotint.ir" />
                 <button class="btn">ساخت آدرس </button>
             </form>
-            <div class="result"></div>
+                        <button id="color-btn" data-clipboard-target=".demo">کپی</button>
+                        <div class="demo">
+                            <div class="result"></div>
+                        </div>
         </div>
         <div class="tag-p">
                 <p>
                      There is no tomorrow
                 </p>
         </div>
-    </main>
-		<div class="footer">
-			<p class="cotint">Powered By Cotint</p>
+        <div class="footer">
+            <p class="cotint">Powered By Cotint</p>
             <div class="footer-bord">
                 <ul>
                     <a href="http://cotint.ir/about-us/"><li>درباره ما</li></a>
@@ -82,12 +88,24 @@
                     <a href="http://cotint.ir/features/"><li>خدمات</li></a>
                 </ul>
             </div>
-		</div>
+        </div>
+    </main>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/demo.js"></script>
     <script src="js/easings.js"></script>
     <script src="js/demo6.js"></script>
+    <script src="js/jquery.copy-to-clipboard.js"></script>
+    <script>
+        $('#color-btn').click(function(){
+            $(this).css("background-color","#239963");
+        });
+    </script>
+    <script>
+        $('button').click(function(){
+            $(this).CopyToClipboard();
+        });
+    </script>
     <script>
         $(document).ready(function(){
             $('.btn').live('click',function(e){
@@ -98,7 +116,7 @@
                     if(data.short != 'invalid')
                         $('.result').html('<a href="'+data.short+'" target="_blank" >'+data.short+'</a>');
                     else
-                        $('.result').html('<div class="error">لینک را درست وارد کنید</div>');
+                        $('.result').html('<div class="error">http://cotint.ir/about : نمونه درست </div>');
                 },'json');
             });
         });
