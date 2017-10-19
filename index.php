@@ -4,7 +4,8 @@
         <meta property="og:description" content="سرویس کوتاه کننده لینک کوتینت جهت استفاده در شبکه اجتماعی و سایر موارد"/>
         <meta property="og:image" content="images/cotint-logo.jpg" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title> کوتاه کننده لینک </title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <title> کوتاه کننده لینک </title>
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -35,10 +36,10 @@
             </div>
             <div class="global-menu">
                 <div class="global-menu__wrap">
-                    <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/about-us/">درباره ما</a>
-                    <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/contact/">تماس باما</a>
-                    <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/">سایت کوتینت</a>
-                    <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/features/">خدمات</a>
+                    <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/about-us/" target="_blank">درباره ما</a>
+                    <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/contact/"  target="_blank">تماس باما</a>
+                    <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/"  target="_blank">سایت کوتینت</a>
+                    <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/features/"  target="_blank">خدمات</a>
                 </div>
             </div>
             <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -74,18 +75,16 @@
                         </div>
         </div>
         <div class="tag-p">
-                <p>
-                     There is no tomorrow
-                </p>
+                <p>There Is No Tomorrow</p>
         </div>
         <div class="footer">
             <p class="cotint">Powered By Cotint</p>
             <div class="footer-bord">
                 <ul>
-                    <a href="http://cotint.ir/about-us/"><li>درباره ما</li></a>
-                    <a href="http://cotint.ir/contact/"><li>تماس باما</li></a>
-                    <a href="http://cotint.ir/"><li>سایت کوتینت</li></a>
-                    <a href="http://cotint.ir/features/"><li>خدمات</li></a>
+                    <a href="http://cotint.ir/about-us/" target="_blank"><li class="click-bord">درباره ما</li></a>
+                    <a href="http://cotint.ir/contact/" target="_blank"><li>تماس باما</li></a>
+                    <a href="http://cotint.ir/" target="_blank"><li>سایت کوتینت</li></a>
+                    <a href="http://cotint.ir/features/" target="_blank"><li>خدمات</li></a>
                 </ul>
             </div>
         </div>
@@ -99,6 +98,7 @@
     <script>
         $('#color-btn').click(function(){
             $(this).css("background-color","#239963");
+            $(this).css("color","#fff");
         });
     </script>
     <script>
