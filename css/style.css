@@ -227,6 +227,13 @@ margin-right: 35px;
 	}
 }
 @media (max-width: 467px) {
+	.center-img {
+		margin: 0 auto;
+		display: block;
+		position: absolute;
+		top: 60px;
+		left: 34% !important;
+	}
 	.result
 	{
 		text-align:center;
@@ -245,7 +252,7 @@ margin-right: 35px;
 		text-align:center;
 		bottom:0px;
 		margin-top: 67px;
-		font-size: 14px;
+		font-size: 11px;
 		background-color: #333;
 		border-top: 6px solid  #239963;
 	}
@@ -256,6 +263,7 @@ margin-right: 35px;
 	.footer li:last-child {
 		border-left: none;
 		border-left: 1px solid #ccc;
+		font-size: 11px !important;
 	}
 	.footer li{
 		display: inline-block;
@@ -264,6 +272,7 @@ margin-right: 35px;
 		padding-left: 20px;
 		color: #ccc;
 		cursor: pointer;
+		font-size: 11px !important;
 	}
 	.footer div{
 		margin:auto;

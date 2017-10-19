@@ -1,11 +1,11 @@
 ﻿<html>
 	<head>
-        <meta property="og:site_name" content="کوتاه کننده لینک"/>
-        <meta property="og:description" content="سرویس کوتاه کننده لینک کوتینت جهت استفاده در شبکه اجتماعی و سایر موارد"/>
-        <meta property="og:image" content="images/cotint-logo.jpg" />
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
         <title> کوتاه کننده لینک </title>
+        <meta property="og:site_name" content="Cotint Shorten Url"/>
+        <meta property="og:description" content="سرویس کوتاه کننده لینک کوتینت جهت استفاده در شبکه های اجتماعی و سایر موارد"/>
+        <meta property="og:image" content="images/cotint-logo.jpg" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -75,7 +75,7 @@
                         </div>
         </div>
         <div class="tag-p">
-                <p>There Is No Tomorrow</p>
+                <p> ... There Is No Tomorrow</p>
         </div>
         <div class="footer">
             <p class="cotint">Powered By Cotint</p>
