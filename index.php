@@ -36,10 +36,10 @@
         </div>
         <div class="global-menu">
             <div class="global-menu__wrap">
+                <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/"  target="_blank"> کوتینت</a>
                 <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/features/"  target="_blank">خدمات</a>
                 <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/about-us/" target="_blank">درباره ما</a>
-                <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/contact/"  target="_blank">تماس باما</a>
-                <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/"  target="_blank">سایت کوتینت</a>
+                <a class="global-menu__item global-menu__item--demo-6" href="http://cotint.ir/contact/"  target="_blank">ارتباط با ما</a>
             </div>
         </div>
         <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -81,10 +81,10 @@
         <p class="cotint">Powered By Cotint</p>
         <div class="footer-bord">
             <ul>
-                <a href="http://cotint.ir/contact/" target="_blank"><li class="click-bord">تماس باما</li></a>
+                <a href="http://cotint.ir/contact/" target="_blank"><li class="click-bord">ارتباط با ما</li></a>
                 <a href="http://cotint.ir/about-us/" target="_blank"><li>درباره ما</li></a>
                 <a href="http://cotint.ir/features/" target="_blank"><li>خدمات</li></a>
-                <a href="http://cotint.ir/" target="_blank"><li>سایت کوتینت</li></a>
+                <a href="http://cotint.ir/" target="_blank"><li>کوتینت</li></a>
             </ul>
         </div>
     </div>
