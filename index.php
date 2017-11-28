@@ -69,7 +69,7 @@
             <input  class="contoroler " type="text" id="url" name="url" placeholder="http://cotint.ir" />
             <button class="btn">ساخت آدرس </button>
         </form>
-        <button id="color-btn" data-clipboard-target=".demo">کپی</button>
+        <button id="color-btn" data-clipboard-target=".result">کپی</button>
         <div class="demo">
             <div class="result"></div>
         </div>
@@ -116,7 +116,7 @@
                 if(data.short != 'invalid')
                     $('.result').html('<a href="'+data.short+'" target="_blank" >'+data.short+'</a>');
                 else
-                    $('.result').html('<div class="error">http://cotint.ir/about : نمونه درست </div>');
+                    $('.result').html('<p class="error">http://cotint.ir/about : نمونه درست </p>');
             },'json');
         });
     });
