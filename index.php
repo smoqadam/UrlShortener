@@ -80,6 +80,9 @@
     </div>
     <div class="footer">
         <p class="cotint">Powered By Cotint</p>
+        <a href="API.php" target="_blank">[API]</a>
+
+        <a href="CommonQuestions.php" target="_blank">[Common Questions]</a>
         <div class="footer-bord">
             <ul>
                 <a href="http://cotint.ir/contact/" target="_blank"><li class="click-bord">ارتباط با ما</li></a>

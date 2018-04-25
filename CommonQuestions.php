@@ -65,18 +65,17 @@
 
     <!-- Mian Content -->
     <div class="box">
-    <h1 style="color: red;">API</h1>
-    <p>COTINT Corporation Releases API to be used Easily by Everone who wants Shorter Link :D</p>
-    <h3 style="color: red;">Post Request</h3>
-    <p>Post Request: http://ctnt.ir/api/v1/shortener/</p>
-    <h5 style=\"color: red;\">Variables</h5>
-    <p>You can pass JSON as input</p>
-    <h5 style=\"color: red;\">Example</h5>
-    <p>{<br>"url":"http://cotintgroup.ir"<br>}</p>
-    <h5 style=\"color: red;\">Output</h5>
-    <p>A JSON file will be returned.</p>
-    <h5 style=\"color: red;\">JSON Response Example</h5>
-    <p>{<br>"short":"http://ctnt.ir/5fBTHp2"<br>}</p>
+
+    <h1>Common Questions!</h1>
+    <ul>
+    <li><a href='#q1'>Question 1</a></li>
+    <li><a href='#q2'>Question 2</a></li>
+    <li><a href='#q3'>Question 3</a></li>
+    </ul>
+    <h2 id='q1'>Question 1</h2>
+    <p>Lorem ipsum ins that privateiblve, an unacceptable risk in corporate environments. Lorem ipsum and its many variants have been employed since the early 1960ies, and quite likely since the sixteenth century.</p>
+    <h2 id='q2'>Question 2</h2> <p>porn employed since the early 1960ies, and quite likely since the sixteenth century.</p>
+    <h2 id='q3'>Question 3</h2> <p>t and its elements. Besides, random text risks to be unintendedly humorous or offensive, an unacceptable risk in corporate environments. Lorem ipsum and its many variants have been employed since the early 1960ies, and quite likely since the sixteenth century.</p>
     </div>
     <!--ENd of Main Content-->
 
@@ -103,15 +102,15 @@
 <script src="js/demo6.js"></script>
 <script src="js/jquery.copy-to-clipboard.js"></script>
 <script>
-$('#color-btn').click(function(){
-    $(this).css("background-color","#239963");
-    $(this).css("color","#fff");
-});
+    $('#color-btn').click(function(){
+        $(this).css("background-color","#239963");
+        $(this).css("color","#fff");
+    });
 </script>
 <script>
-$('button').click(function(){
-    $(this).CopyToClipboard();
-});
+    $('button').click(function(){
+        $(this).CopyToClipboard();
+    });
 </script>
 
 </body>
