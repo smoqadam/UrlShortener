@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <head>
     <title> کوتاه کننده لینک </title>
     <meta property="og:site_name" content="Cotint Shorten Url"/>
@@ -62,22 +62,24 @@
             <path class="shape-overlays__path"></path>
         </svg>
     </div>
+
+    <!-- Mian Content -->
     <div class="box">
 
-        <form class="form-cont" id="frm1" action="" method="post">
-            <h2 class="center">لینک را در کادر زیر وارد کنید  </h2>
-            <input  class="contoroler " type="text" id="url" name="url" placeholder="http://cotint.ir" required/>
-            <input type="text" id="keyword" name="keyword" placeholder="Your Wanted Keyword"/>
-            <button class="btn">ساخت آدرس </button>
-        </form>
-        <button id="color-btn" data-clipboard-target=".result">کپی</button>
-        <div class="demo">
-            <div class="result"></div>
-        </div>
+    <h1>Common Questions!</h1>
+    <ul>
+    <li><a href='#q1'>Question 1</a></li>
+    <li><a href='#q2'>Question 2</a></li>
+    <li><a href='#q3'>Question 3</a></li>
+    </ul>
+    <h2 id='q1'>Question 1</h2>
+    <p>Lorem ipsum ins that privateiblve, an unacceptable risk in corporate environments. Lorem ipsum and its many variants have been employed since the early 1960ies, and quite likely since the sixteenth century.</p>
+    <h2 id='q2'>Question 2</h2> <p>porn employed since the early 1960ies, and quite likely since the sixteenth century.</p>
+    <h2 id='q3'>Question 3</h2> <p>t and its elements. Besides, random text risks to be unintendedly humorous or offensive, an unacceptable risk in corporate environments. Lorem ipsum and its many variants have been employed since the early 1960ies, and quite likely since the sixteenth century.</p>
     </div>
-    <div class="tag-p">
-        <p> ... There Is No Tomorrow</p>
-    </div>
+    <!--ENd of Main Content-->
+
+
     <div class="footer">
         <p class="cotint">Powered By Cotint</p>
         <a href="API.php" target="_blank">[API]</a>
@@ -110,26 +112,12 @@
         $(this).CopyToClipboard();
     });
 </script>
-<script>
-    $(document).ready(function(){
-        $('.btn').live('click',function(e){
-            e.preventDefault();
 
-            var url = $('#url').val();
-            var keyword = $('#keyword').val();
-
-            $('.result').html('<img src="images/loading.gif" />');
-            $.post('shortener.php',{url: url, keyword: keyword},function(data){
-                if(data.short != 'invalid' && data.short != 'k')
-                    $('.result').html('<a href="'+data.short+'" target="_blank" >'+data.short+'</a>');
-                else if(data.short != 'k')
-                    $('.result').html('<p class="error">Correct URL Form: http://cotint.ir/about</p>');
-                else
-                    $('.result').html('<p class="error">Reserved Keyword!</p>');
-            },'json');
-        });
-    });
-</script>
 </body>
 </html>
+
+
+
+
+
 
