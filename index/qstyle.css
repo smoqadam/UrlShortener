@@ -1,0 +1,35 @@
+*{
+    font-size: 13px;
+   
+}
+body{
+    background-color: #239963;
+}
+.col{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding-bottom: 500px !important;
+    margin-top: 70px  !important;
+    margin-bottom: 70px  !important;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+li{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.part{
+    padding-bottom: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #ac1515;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 15px;
+}
+a{
+        color: #239963;
+}

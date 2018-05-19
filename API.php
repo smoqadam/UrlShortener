@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <head>
     <title> کوتاه کننده لینک </title>
     <meta property="og:site_name" content="Cotint Shorten Url"/>
@@ -62,27 +62,30 @@
             <path class="shape-overlays__path"></path>
         </svg>
     </div>
-    <div class="box">
 
-        <form class="form-cont" id="frm1" action="" method="post">
-            <h2 class="center">لینک را در کادر زیر وارد کنید  </h2>
-            <input  class="contoroler " type="text" id="url" name="url" placeholder="http://cotint.ir" required/>
-            <input type="text" id="keyword" name="keyword" placeholder="Your Wanted Keyword"/>
-            <button class="btn">ساخت آدرس </button>
-        </form>
-        <button id="color-btn" data-clipboard-target=".result">کپی</button>
-        <div class="demo">
-            <div class="result"></div>
-        </div>
+    <!-- Mian Content -->
+    <div class="box">
+    <h1 style="color: red;">API</h1>
+    <p>COTINT Corporation Releases API to be used Easily by Everone who wants Shorter Link :D</p>
+    <h3 style="color: red;">Post Request</h3>
+    <p>Post Request: http://ctnt.ir/api/v1/shortener/</p>
+    <h5 style=\"color: red;\">Variables</h5>
+    <p>You can pass JSON as input</p>
+    <h5 style=\"color: red;\">Example</h5>
+    <p>{<br>"url":"http://cotintgroup.ir"<br>}</p>
+    <h5 style=\"color: red;\">Output</h5>
+    <p>A JSON file will be returned.</p>
+    <h5 style=\"color: red;\">JSON Response Example</h5>
+    <p>{<br>"short":"http://ctnt.ir/5fBTHp2"<br>}</p>
     </div>
-    <div class="tag-p">
-        <p> ... There Is No Tomorrow</p>
-    </div>
+    <!--ENd of Main Content-->
+
+
     <div class="footer">
         <p class="cotint">Powered By Cotint</p>
-        <a href="index/api.html" target="_blank">[API]</a>
+        <a href="API.php" target="_blank">[API]</a>
 
-        <a href="index/question.html" target="_blank">[Common Questions]</a>
+        <a href="CommonQuestions.php" target="_blank">[Common Questions]</a>
         <div class="footer-bord">
             <ul>
                 <a href="http://cotint.ir/contact/" target="_blank"><li class="click-bord">ارتباط با ما</li></a>
@@ -100,36 +103,22 @@
 <script src="js/demo6.js"></script>
 <script src="js/jquery.copy-to-clipboard.js"></script>
 <script>
-    $('#color-btn').click(function(){
-        $(this).css("background-color","#239963");
-        $(this).css("color","#fff");
-    });
+$('#color-btn').click(function(){
+    $(this).css("background-color","#239963");
+    $(this).css("color","#fff");
+});
 </script>
 <script>
-    $('button').click(function(){
-        $(this).CopyToClipboard();
-    });
+$('button').click(function(){
+    $(this).CopyToClipboard();
+});
 </script>
-<script>
-    $(document).ready(function(){
-        $('.btn').live('click',function(e){
-            e.preventDefault();
 
-            var url = $('#url').val();
-            var keyword = $('#keyword').val();
-
-            $('.result').html('<img src="images/loading.gif" />');
-            $.post('shortener.php',{url: url, keyword: keyword},function(data){
-                if(data.short != 'invalid' && data.short != 'k')
-                    $('.result').html('<a href="'+data.short+'" target="_blank" >'+data.short+'</a>');
-                else if(data.short != 'k')
-                    $('.result').html('<p class="error">Correct URL Form: http://cotint.ir/about</p>');
-                else
-                    $('.result').html('<p class="error">Reserved Keyword!</p>');
-            },'json');
-        });
-    });
-</script>
 </body>
 </html>
+
+
+
+
+
 
