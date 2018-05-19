@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="fa">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gam</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-v4-rtl/dist/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../app/fonts/fontawsemeCss/fontawesome-all.min.css">
+    <link rel="stylesheet" href="styleApi.css">
+</head>
+<body>
+<section id="API">
+   <div class="container">
+       <div class="row">
+           <div class="col p-5 my-5 bordertotal">
+            <h3 class="text-30 text-center pb-3 apI">API</h3>
+              <h5 class="text-right">یک ای پی ای قدرتمند برای استفاده کلیه وبسایت ها ارائه میدهد</h5>
+              
+              <div class="py-3">
+                <h4 class="title">Simple API</h4>
+               <div>
+               <ul>
+                   <li><span class="font-weight-bold">GET requests : </span><span class="texthighlight">&thinsp;  http://bnmd.ir/api.php?url=YOUR-LONG-URL&custom=YOUR-CUSTOM-NAME &thinsp;</span> </li>
+               </ul>
+               </div>
+               <div class="border p-3">
+                  <h3>http://bnmd.ir/P</h3>
+               </div>          
+              </div>
+              
+              <div class="py-3">
+                  <h3 class="title">write API Endpoints : </h3>
+               <div>
+                  <ul>
+                      <li><span class="font-weight-bold">GET requests : </span><span  class="texthighlight">&thinsp; http://bnmd.ir/API/write/get &thinsp;</span></li>
+                      <li><span class="font-weight-bold">POST requets : </span><span  class="texthighlight">&thinsp; http://bnmd.ir/api/write/post &thinsp;</span></li>
+                  </ul>
+               </div>
+              </div>
+                  
+               <div class="py-3">
+                 
+                  <h1 class="title">Variables:</h1>
+                  
+                   <h3 class="text-muted pb-3">You can pass up to 8 variables to control the response or your application. </h3>
+                   
+                   <ul>
+                       <li><span class="font-weight-bold">url : </span><span  class="texthighlight">The url you want to shrink.</span> required.</li>
+                       <li><span class="font-weight-bold">custom : </span><span class="texthighlight">&thinsp; Custom name. &thinsp;</span> optional.</li>
+                       <li><span class="font-weight-bold">type : </span><span class="texthighlight">&thinsp; Response type (json|xml). &thinsp;</span> optional, default: json. &thinsp;</li>
+                       <li><span class="font-weight-bold">private : </span><span class="texthighlight"> &thinsp; Set url to private (not listed). &thinsp;</span> optional</li>
+                       <li><span class="font-weight-bold">password : </span><span class="texthighlight"> &thinsp; Set url password. &thinsp;</span> optional (max 10 chars)</li>
+                       <li><span class="font-weight-bold">uses : </span><span class="texthighlight">&thinsp; Number of uses for the url. &thinsp;</span> optional</li>
+                       <li><span class="font-weight-bold">uexpirerl : </span><span class="texthighlight">&thinsp; date in format MM/DD/YYYY to expire url. &thinsp;</span> optional</li>
+                       <li><span class="font-weight-bold">via : </span><span class="texthighlight">&thinsp; Adds a signature to track your application. &thinsp;</span> optional</li>
+                   </ul>
+               </div>
+
+               <div class="py-3">
+                       <h1 class="title">Example:</h1>
+                   <span class="texthighlight">&thinsp; http://bnmd.ir/API/write/get?url=http://youtube.com&custom=mycustomname&type=xml &thinsp;</span>
+               </div>
+    
+               <div class="py-3">
+                        <h1 class="title">XML Response example:</h1>
+                       <div class="border p-3">
+                        <xmp>
+                               <response>
+                                <success>1</success>
+                                    <data>
+                                        <id>mycustomname</id>
+                                        <url>http://bnmd.ir/mycustomname</url>
+                                        <full>http://youtube.com</full>
+                                        <hits>0</hits>
+                                        <status>custom_new</status>
+                                        <via>api</via>
+                                        <date>1330715001</date>
+                                        <last>1330719941</last>
+                                    </data>
+                               </response>
+                        </xmp>
+                       </div>
+                </div>
+        
+                  <div class="py-3">
+                        <h1 class="title">Read API Endpoints:</h1>
+                       <div>
+                          
+                          <ul>
+                              <li><span class="font-weight-bold">GET requests : </span> <span  class="texthighlight">&thinsp; http://bnmd.ir/API/write/get &thinsp;</span></li>
+                              <li><span class="font-weight-bold">POST requets : </span><span class="texthighlight">&thinsp; http://bnmd.ir/api/write/post &thinsp;</span></li>
+                          </ul>
+                       </div>  
+                  </div>
+                   
+                  <div class="py-3">
+                        <h1 class="title">Variables:</h1>
+                        
+                        <h3 class="text-muted pb-3">You can pass up to three variables to control the response or your application.</h3>
+                        
+                      <ul>
+                          <li><span class="font-weight-bold">id : </span><span  class="texthighlight">&thinsp; ID of the url you want to access. &thinsp;</span>required</li>
+                          <li><span class="font-weight-bold">password : </span><span class="texthighlight">&thinsp; password for url (if protected). &thinsp;</span>optional.</li>
+                          <li><span class="font-weight-bold">type : </span><span class="texthighlight">&thinsp; Response type (json|xml). &thinsp;</span>optional, default: json.</li>
+                      </ul>
+                  </div>
+                  
+                  <div class="py-3">
+                       <h1 class="title">Example:</h1>
+                   <span class="texthighlight">&thinsp; http://bnmd.ir/API/write/get?url=http://youtube.com&custom=mycustomname&type=xml &thinsp;</span>
+                  </div>
+                  
+                  <div class="py-3">
+                     <h1 class="title">XML Response example:</h1>
+                           <div class="border p-3">
+                            <xmp>
+                                <response>
+                                    <success>1</success>
+                                        <data>
+                                            <id>P</id>
+                                            <hits>101</hits>
+                                            <ads>1</ads>
+                                            <hits>0</hits>
+                                            <full>http://google.com</full>
+                                            <created>1334239095</created>
+                                            <last>1334241124</last>
+                                        </data>
+                                </response>
+                            </xmp>
+                           </div>
+                  </div>
+                  
+                   <div class="py-3">
+                      
+                       <h3 class="title">Tags : </h3>
+                       <ul>
+                           <li><span class="font-weight-bold">success : </span> <span  class="texthighlight">&thinsp; (true|false) for request success. &thinsp;</span></li>
+                           <li><span class="font-weight-bold">data:</span>
+                            <ul>
+                                <li><span class="font-weight-bold"> id : </span><span  class="texthighlight">&thinsp; Unique identifier of url. &thinsp;</span></li>
+                              
+                                <li><span class="font-weight-bold"> url :</span> <span  class="texthighlight">&thinsp; Shortened url. &thinsp;</span></li>
+                              
+                                <li><span class="font-weight-bold"> full : </span><span  class="texthighlight">&thinsp; Full url before shortened. &thinsp;</span></li>
+                              
+                                <li><span class="font-weight-bold">uses : </span><span  class="texthighlight">&thinsp; Clicks left to inactivate url. &thinsp;</span></li>
+                              
+                                <li><span class="font-weight-bold"> hits : </span><span  class="texthighlight">&thinsp; Number of hits to the link. &thinsp;</span></li>
+                              
+                                <li><span class="font-weight-bold"> ads : </span><span  class="texthighlight">&thinsp; Indicate if url use ads. &thinsp;</span></li>
+                              
+                                <li><span class="font-weight-bold"> date : </span><span  class="texthighlight">&thinsp; Timestamp where the url was make. &thinsp;</span></li>
+                              
+                                <li><span class="font-weight-bold"> last : </span><span  class="texthighlight">&thinsp; Timestamp for the las click. &thinsp;</span></li>
+                              
+                                <li><span class="font-weight-bold"> last : </span><span  class="texthighlight">&thinsp; Timestamp to inactivate link. &thinsp;</span></li>
+                              
+                            </ul>  
+                              
+                          </li>
+                          
+                      </ul>
+    
+                   </div>
+               
+                
+                  <div class="py-3">
+                      <h1 class="title">XML Error example:</h1>
+                       <div class="border">
+                        <xmp class="ml-5">
+                            <response>
+                                <success>0</success>
+                                    <error>
+                                        <code>0</code>
+                                        <msg>domain not allowed</msg>
+                                    </error>
+                            </response>
+                        </xmp>
+                   </div>
+                  </div>
+                   <div class="py-3">
+                      
+                      <h3 class="title">Tags : </h3>
+                       <ul>
+                           <li><span class="font-weight-bold"> success : </span><span  class="texthighlight">&thinsp; (true|false) for request success. &thinsp;</span></li>
+                           <li><span class="font-weight-bold"> error : </span>
+                            <ul>
+                                <li><span class="font-weight-bold"> code : </span><span  class="texthighlight">&thinsp; Error code: 0, 1 and 2. &thinsp;</span></li>
+                              
+                                <li> <span class="font-weight-bold">url : </span><span  class="texthighlight">&thinsp; Error msg. &thinsp;</span></li>
+                              
+                            </ul>  
+                              
+                          </li>
+                          
+                      </ul>
+    
+                   </div>
+                   
+           </div>
+       </div>
+   </div>
+    
+</section>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="../dest/js/app.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            items: 1
+        });
+    });
+</script>
+
+</body>
+</html>
