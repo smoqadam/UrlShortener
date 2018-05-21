@@ -15,6 +15,7 @@
 * `create_time` TIMESTAMP NOT NULL
 * ) ENGINE = MYISAM ;
 */
+
 class UrlShortener
 {
 
@@ -76,9 +77,9 @@ class UrlShortener
 		}
 		// insert in db and return short code
 		if($this->validUrl($url)) {
-			$short_code = $this->createShortCode($url);
+		    $short_code = $this->createShortCode($url);
 			$stm = $this->pdo->prepare('insert into urls (url , short_code,create_time,visits)values(:url,:short_code,:time,:visits)');
-			$param = array('url'=>$url,'short_code'=>$short_code,'time'=>date('Y-j-m'),'visits'=>0);
+			$param = array('url'=>$url,'short_code'=>$short_code,'time'=>date("Y-m-d H:i:s"),'visits'=>0);
 			$stm->execute($param);
 			return $short_code;
 		} else {
@@ -113,4 +114,28 @@ class UrlShortener
 		$stm->execute();
 		return $stm->fetchAll();
 	}
+
+
+
+	// helper function to use keyword as generated URL
+    public function insertWithOutGenerating($url, $keyword)
+    {
+        // if url exist in db return short code
+        if(($short_code = $this->existInDb($url)) !== false) {
+            return $short_code;
+        }
+
+        // insert in db and return short code
+        if($this->validUrl($url)) {
+            $short_code = $keyword;
+            $stm = $this->pdo->prepare('insert into urls (url , short_code,create_time,visits)values(:url,:short_code,:time,:visits)');
+            $param = array('url'=>$url,'short_code'=>$short_code,'time'=>date("Y-m-d H:i:s"),'visits'=>0);
+            $stm->execute($param);
+            return $short_code;
+        } else {
+            return 'invalid';
+        }
+
+        return false;
+    }
 }
